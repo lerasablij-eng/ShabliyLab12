@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №10 — Float</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            width: 100%;
+            min-height: 100vh;
+            padding: 3px;
+            overflow: hidden;
+        }
+
+        .block {
+            border: 1px solid white;
+            margin: 3px;
+        }
+
+        .header {
+            float: left;
+            width: calc(80% - 6px);
+            height: 153px;
+            background: #5B9BD5;
+        }
+
+        .sidebar {
+            float: right;
+            width: calc(20% - 6px);
+            height: 393px;
+            background: #748386;
+        }
+
+        .main {
+            float: left;
+            width: calc(80% - 6px);
+            height: 240px;
+            overflow: hidden;
+        }
+
+        .cyan {
+            float: left;
+            width: calc(28% - 6px);
+            height: 110px;
+            background: #5CCBCB;
+        }
+
+        .red {
+            float: left;
+            width: calc(28% - 6px);
+            height: 110px;
+            background: #E36B6D;
+        }
+
+        .yellow {
+            float: right;
+            width: calc(44% - 6px);
+            height: 240px;
+            background: #FFC000;
+        }
+
+        .green {
+            float: left;
+            width: calc(56% - 6px);
+            height: 130px;
+            background: #31A879;
+        }
+
+        .footer {
+            clear: both;
+            width: calc(100% - 6px);
+            height: 100px;
+            background: #C65911;
+        }
+
+        @media (max-width: 499px) {
+            .header, .sidebar, .main, .footer {
+                float: none;
+                width: calc(100% - 6px);
+            }
+
+            .header, .sidebar, .footer {
+                height: 90px;
+            }
+
+            .main {
+                height: auto;
+                overflow: hidden;
+            }
+
+            .cyan, .red, .yellow, .green {
+                float: none;
+                width: calc(100% - 6px);
+                height: 90px;
+            }
+        }
+
+        @media (min-width: 500px) and (max-width: 749px) {
+            .header, .sidebar, .main, .footer {
+                width: calc(100% - 6px);
+            }
+
+            .header, .sidebar {
+                height: 100px;
+            }
+
+            .main {
+                height: auto;
+            }
+
+            .yellow {
+                float: none;
+                width: calc(100% - 6px);
+                height: 120px;
+            }
+
+            .cyan, .red {
+                width: calc(50% - 6px);
+            }
+
+            .green {
+                width: calc(100% - 6px);
+            }
+        }
+
+        @media (min-width: 750px) and (max-width: 949px) {
+            .header {
+                width: calc(75% - 6px);
+            }
+
+            .sidebar {
+                width: calc(25% - 6px);
+            }
+
+            .main {
+                width: calc(75% - 6px);
+            }
+        }
+
+        @media (min-width: 950px) and (max-width: 1199px) {
+            .wrapper {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .wrapper {
+                max-width: 1600px;
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="block header">
+    <a href="register.html" style="color: white; font-size: 18px; padding: 15px; display: inline-block;">
+        Реєстрація
+    </a>
+</div>
+
+        <div class="block sidebar"></div>
+
+        <div class="main">
+            <div class="block yellow"></div>
+            <div class="block cyan"></div>
+            <div class="block red"></div>
+            <div class="block green"></div>
+        </div>
+
+        <div class="block footer"></div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Commands</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        header {
+            background: #42a5f5;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #d46b5c;
+        }
+
+        header h2 {
+            margin: 0;
+            color: #173b55;
+            font-size: 22px;
+        }
+
+        header p {
+            margin: 2px 0 0;
+            color: white;
+            font-size: 12px;
+        }
+
+        nav a {
+            color: #173b55;
+            text-decoration: none;
+            margin-left: 12px;
+            font-size: 12px;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            padding: 25px 9%;
+            min-height: 550px;
+        }
+
+        h3 {
+            margin: 0 0 10px;
+            font-size: 19px;
+        }
+
+        .blue { color: #5799b8; }
+        .green { color: #75b82a; }
+        .orange { color: #e66b32; }
+
+        .command {
+            margin-bottom: 14px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .command p {
+            margin: 0 0 4px;
+        }
+
+        code {
+            font-weight: bold;
+            color: #222;
+            font-family: "Courier New", monospace;
+        }
+
+        footer {
+            background: #263238;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            font-size: 11px;
+        }
+
+        @media (max-width: 800px) {
+            main {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div>
+        <h2>Мій особистий блог</h2>
+        <p>Особиста сторінка</p>
+    </div>
+
+    <nav>
+        <a href="#">Вхід</a>
+        <a href="register.html">Реєстрація</a>
+    </nav>
+</header>
+
+<main>
+
+    <section>
+        <h3 class="blue">Create a Repository</h3>
+
+        <div class="command">
+            <p>From scratch - Create a new local repository</p>
+            <code>$ git init [project name]</code>
+        </div>
+
+        <div class="command">
+            <p>Download from an existing repository</p>
+            <code>$ git clone my_url</code>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    © Всі права захищені.
+</footer>
+
+</body>
+</html>

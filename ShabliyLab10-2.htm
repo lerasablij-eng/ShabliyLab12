@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №10 — Flexbox</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 3px;
+        }
+
+        .content-area {
+            display: flex;
+            flex: 1;
+            min-height: 493px;
+        }
+
+        .left-column {
+            display: flex;
+            flex-direction: column;
+            flex: 4;
+        }
+
+        .header {
+            height: 153px;
+            background: #5B9BD5;
+        }
+
+        .main {
+            display: flex;
+            flex: 1;
+            min-height: 340px;
+        }
+
+        .left-stack {
+            display: flex;
+            flex-direction: column;
+            flex: 56;
+        }
+
+        .top-blocks {
+            display: flex;
+            flex: 110;
+        }
+
+        .cyan {
+            flex: 1;
+            background: #5CCBCB;
+        }
+
+        .red {
+            flex: 1;
+            background: #E36B6D;
+        }
+
+        .green {
+            flex: 1;
+            background: #31A879;
+        }
+
+        .yellow {
+            flex: 44;
+            background: #FFC000;
+        }
+
+        .sidebar {
+            flex: 1;
+            background: #748386;
+        }
+
+        .footer {
+            height: 100px;
+            background: #C65911;
+        }
+
+        .block {
+            border: 1px solid white;
+            margin: 3px;
+        }
+
+        @media (max-width: 499px) {
+            .content-area {
+                flex-direction: column;
+            }
+
+            .header, .sidebar, .footer {
+                height: 90px;
+            }
+
+            .main {
+                flex-direction: column;
+            }
+
+            .left-stack {
+                flex: none;
+            }
+
+            .top-blocks {
+                flex-direction: column;
+            }
+
+            .cyan, .red, .green, .yellow {
+                min-height: 90px;
+            }
+
+            .left-column {
+                flex: none;
+            }
+
+            .content-area {
+                min-height: auto;
+            }
+        }
+
+        @media (min-width: 500px) and (max-width: 749px) {
+            .content-area {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                min-height: 100px;
+            }
+
+            .main {
+                min-height: 240px;
+            }
+        }
+
+        @media (min-width: 750px) and (max-width: 949px) {
+            .content-area {
+                min-height: 420px;
+            }
+        }
+
+        @media (min-width: 950px) and (max-width: 1199px) {
+            .content-area {
+                min-height: 493px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .wrapper {
+                max-width: 1600px;
+                width: 100%;
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="content-area">
+            <div class="left-column">
+
+                <div class="block header"></div>
+
+                <div class="main">
+                    <div class="left-stack">
+                        <div class="top-blocks">
+                            <div class="block cyan"></div>
+                            <div class="block red"></div>
+                        </div>
+
+                        <div class="block green"></div>
+                    </div>
+
+                    <div class="block yellow"></div>
+                </div>
+
+            </div>
+
+            <div class="block sidebar"></div>
+        </div>
+
+        <div class="block footer"></div>
+
+    </div>
+</body>
+</html>

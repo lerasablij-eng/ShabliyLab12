@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №10 — Grid Layout</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+            grid-template-rows: 153px 240px 100px;
+            grid-template-areas:
+                "header sidebar"
+                "main sidebar"
+                "footer footer";
+            min-height: 100vh;
+            padding: 3px;
+        }
+
+        .block {
+            border: 1px solid white;
+            margin: 3px;
+        }
+
+        .header {
+            grid-area: header;
+            background: #5B9BD5;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: #748386;
+        }
+
+        .main {
+            grid-area: main;
+            display: grid;
+            grid-template-columns: 56fr 44fr;
+            grid-template-rows: 110px 130px;
+            grid-template-areas:
+                "top yellow"
+                "green yellow";
+        }
+
+        .top-blocks {
+            grid-area: top;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .cyan {
+            background: #5CCBCB;
+        }
+
+        .red {
+            background: #E36B6D;
+        }
+
+        .green {
+            grid-area: green;
+            background: #31A879;
+        }
+
+        .yellow {
+            grid-area: yellow;
+            background: #FFC000;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: #C65911;
+        }
+
+        @media (max-width: 499px) {
+            .wrapper {
+                grid-template-columns: 1fr;
+                grid-template-rows: 90px auto auto 90px;
+                grid-template-areas:
+                    "header"
+                    "main"
+                    "sidebar"
+                    "footer";
+            }
+
+            .main {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(4, 90px);
+                grid-template-areas:
+                    "top"
+                    "green"
+                    "yellow"
+                    "yellow";
+            }
+
+            .top-blocks {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 500px) and (max-width: 749px) {
+            .wrapper {
+                grid-template-columns: 1fr;
+                grid-template-rows: 100px 240px 100px 80px;
+                grid-template-areas:
+                    "header"
+                    "main"
+                    "sidebar"
+                    "footer";
+            }
+        }
+
+        @media (min-width: 750px) and (max-width: 949px) {
+            .wrapper {
+                grid-template-columns: 3fr 1fr;
+            }
+        }
+
+        @media (min-width: 950px) and (max-width: 1199px) {
+            .wrapper {
+                grid-template-columns: 4fr 1fr;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .wrapper {
+                max-width: 1600px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div class="block header"></div>
+
+        <div class="block sidebar"></div>
+
+        <div class="main">
+            <div class="top-blocks">
+                <div class="block cyan"></div>
+                <div class="block red"></div>
+            </div>
+
+            <div class="block green"></div>
+
+            <div class="block yellow"></div>
+        </div>
+
+        <div class="block footer"></div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        header {
+            background-color: #42a5f5;
+            color: white;
+            padding: 12px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #d46b5c;
+        }
+
+        header h2 {
+            margin: 0;
+        }
+
+        header p {
+            margin: 3px 0 0;
+        }
+
+        nav a {
+            color: #123b55;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+
+        main {
+            min-height: 510px;
+            padding: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .registration {
+            width: 310px;
+            border: 1px solid #bbb;
+            padding: 0 14px 12px;
+        }
+
+        .registration h3 {
+            background-color: #42a5f5;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            margin: 0 -14px 15px;
+        }
+
+        .field {
+            margin-bottom: 12px;
+        }
+
+        .field label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 13px;
+        }
+
+        .field input,
+        .field select {
+            width: 100%;
+            padding: 7px;
+            border: 1px solid #ddd;
+        }
+
+        footer {
+            background-color: #263238;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h2>Мій особистий блог</h2>
+            <p>Твоє ім'я та прізвище</p>
+        </div>
+
+        <nav>
+            <a href="#">Вхід</a>
+            <a href="register.html">Реєстрація</a>
+        </nav>
+    </header>
+
+    <main>
+        <form class="registration">
+            <h3>Реєстрація користувача</h3>
+
+            <div class="field">
+                <label for="surname">Прізвище</label>
+                <input type="text" id="surname" name="surname">
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        © Всі права захищені.
+    </footer>
+
+</body>
+</html>
